@@ -1,21 +1,13 @@
-# Victorian Dream House — Cinematic One-Page
+# Victorian Dream House — Cinematic V2
 
-Upload the entire contents of this folder to the `main` branch root.
+Upload `index.html` and the `assets/` folder to the root of `main`.
 
-Files:
-- `index.html`
-- `assets/`
-
-The page is English-only and uses the supplied business information:
-- Salwan Samter — 0431 611 754
-- Haibat Kaka — 0424 633 843
-- info@victoriandreamhouse.com.au
-- Melbourne, Victoria, Australia
-- Mon–Fri: 7:30am–4:30pm
-- Service areas across Victoria as supplied in the brief.
-
-WhatsApp:
-- Salwan: +61 431 611 754
-- Haibat: +61 424 633 843
-
-Email buttons open Gmail compose directly.
+Included:
+- English-only responsive cinematic site
+- Current website link: https://victoriandreamhouse.au/
+- WhatsApp for Salwan and Haibat
+- Gmail compose for info@victoriandreamhouse.com.au
+- Melbourne / Victoria service areas
+- Mobile-first layout with reduced image zoom and less crowded sections
+- Product images supplied in the project materials
+- Powered by IQ GROUP

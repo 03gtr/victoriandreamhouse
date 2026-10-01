@@ -3,284 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Victorian Dream House — Aluminium Windows & Doors</title>
-<meta name="description" content="Melbourne's trusted aluminium windows and doors manufacturer. Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.">
+<title>Victorian Dream House | Aluminium Windows & Doors Melbourne</title>
+<meta name="description" content="Premium aluminium windows and doors for residential, semi-commercial and commercial projects across Victoria.">
 <style>
-:root{
-  --ink:#20120c;--paper:#f4efe6;--warm:#e87500;--cream:#fffaf0;
-  --line:rgba(255,255,255,.18);--muted:rgba(255,255,255,.76);
+:root{--bg:#170c07;--panel:#23150f;--cream:#f7f1e7;--muted:#cfc2b5;--orange:#ed7900;--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.page{overflow:hidden}.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:15px clamp(18px,4vw,60px);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(#100703d9,transparent);backdrop-filter:blur(4px)}
+.logo{width:92px;height:54px;object-fit:contain;background:#fff;border-radius:8px;padding:4px}.links{display:flex;gap:24px;align-items:center;font-size:13px}.links a:hover{color:#ff9a26}.cta{background:var(--orange);padding:12px 18px;border-radius:8px;font-weight:800}
+.hero,.scene{min-height:100svh;position:relative;display:flex;align-items:center;isolation:isolate}
+.scene{min-height:76svh}.media{position:absolute;inset:0;z-index:-2;overflow:hidden}.media img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.015);transition:transform 7s ease}.scene.active .media img{transform:scale(1.035)}
+.media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,5,2,.88),rgba(10,5,2,.42) 58%,rgba(10,5,2,.48)),linear-gradient(0deg,rgba(10,5,2,.7),transparent 55%)}
+.wrap{width:min(1180px,88vw);margin:auto}.hero .wrap{padding-top:65px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:#ff941c;font-weight:800;margin-bottom:15px}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(43px,6.8vw,86px);line-height:.98;letter-spacing:-.045em;margin:0 0 22px;max-width:820px}h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(34px,5vw,62px);line-height:1.02;margin:0 0 16px}
+.accent{color:#f0830b}.lead{font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--muted);max-width:720px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 19px;border-radius:8px;border:1px solid var(--line);background:#1c100bf2;font-weight:800}.btn.primary{background:var(--orange);border-color:var(--orange)}
+.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.tag{border:1px solid var(--line);background:#10080599;padding:9px 12px;border-radius:99px;color:#eee;font-size:12px}
+.products{background:var(--bg);padding:70px 0}.products .head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:var(--cream);color:#20140e;border-radius:10px;overflow:hidden;box-shadow:0 12px 30px #0004}.card img{display:block;width:100%;height:180px;object-fit:cover}.card .body{padding:14px 15px 16px}.type{font-size:10px;letter-spacing:.14em;color:#d56b00;text-transform:uppercase;font-weight:800}.card h3{margin:7px 0 0;font-size:16px}.process{padding:70px 0;background:#21130c}.processgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.processcard{border:1px solid var(--line);padding:25px;border-radius:12px;background:#1b0f0ae6}.num{color:var(--orange);font-weight:900;letter-spacing:.15em}.processcard h3{margin:10px 0 8px;font-size:20px}.areas{padding:65px 0}.area-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.area{padding:11px 14px;border:1px solid var(--line);border-radius:99px;color:#ddd}.contact{background:var(--cream);color:#1b110c;padding:65px 0}.contact .lead{color:#675a50}.contactgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;margin-top:30px}.contactcard{border:1px solid #d9cec2;background:white;padding:20px;border-radius:10px}.contactcard small{display:block;color:#c96b05;text-transform:uppercase;letter-spacing:.12em;margin-bottom:7px;font-weight:800}.contact-actions{margin-top:22px}.footer{padding:20px 5vw;background:#120804;color:#b9aa9e;display:flex;justify-content:space-between;gap:15px;font-size:12px}.footer b{color:#fff}
+.mobile-menu{display:none}
+@media(max-width:800px){
+ .links{display:none}.mobile-menu{display:block;border:1px solid var(--line);background:#130a06;color:#fff;border-radius:8px;padding:9px 11px}
+ .nav{padding:12px 16px}.logo{width:76px;height:45px}
+ .hero{min-height:92svh}.hero .wrap{padding-top:50px}.wrap{width:calc(100% - 36px)}
+ h1{font-size:clamp(39px,12vw,58px);max-width:650px}.lead{font-size:15px;line-height:1.55}
+ .media img{object-position:center;transform:none!important}.media:after{background:linear-gradient(90deg,rgba(10,5,2,.86),rgba(10,5,2,.35)),linear-gradient(0deg,rgba(10,5,2,.76),transparent 58%)}
+ .scene{min-height:68svh}.scene .wrap{padding:20px 0}
+ .products{padding:45px 0}.products .head{display:block}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.card img{height:125px}.card .body{padding:11px}.card h3{font-size:14px}
+ .process{padding:45px 0}.processgrid{grid-template-columns:1fr}
+ .areas{padding:45px 0}.contact{padding:45px 0}.contactgrid{grid-template-columns:1fr;gap:10px}
+ .footer{flex-direction:column;text-align:center;padding:18px}
+ .cta{padding:10px 13px;font-size:12px}
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#120904;color:#fff;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-body{overflow:hidden}
-a{color:inherit;text-decoration:none}
-.site{height:100svh;position:relative;overflow:hidden;background:#120904}
-.scene{
- position:absolute;inset:0;opacity:0;visibility:hidden;
- transition:opacity 1s ease,visibility 1s ease;
-}
-.scene.active{opacity:1;visibility:visible}
-.scene img.bg{
- position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;
- filter:saturate(.9) contrast(1.02) brightness(.7);
- transform:scale(1.08);
- transition:transform 8s cubic-bezier(.2,.7,.2,1);
-}
-.scene.active img.bg{transform:scale(1.0)}
-.scene:after{
- content:"";position:absolute;inset:0;
- background:linear-gradient(90deg,rgba(10,5,2,.82),rgba(10,5,2,.32) 52%,rgba(10,5,2,.68)),
-            linear-gradient(0deg,rgba(10,5,2,.78),transparent 45%);
-}
-.topbar{
- position:absolute;z-index:20;left:0;right:0;top:0;
- display:flex;align-items:center;justify-content:space-between;
- padding:20px 5vw;
- mix-blend-mode:normal;
-}
-.logo{height:56px;width:auto;border-radius:10px;background:white;padding:5px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
-.nav{display:flex;gap:26px;align-items:center;font-size:14px}
-.nav a{opacity:.86}.nav a:hover{color:#ff9a27}
-.quote{
- background:var(--warm);padding:13px 19px;border-radius:9px;font-weight:800;
- box-shadow:0 10px 35px rgba(232,117,0,.24)
-}
-.content{
- position:absolute;z-index:10;left:7vw;right:7vw;top:50%;
- transform:translateY(-50%);max-width:900px
-}
-.kicker{color:#ff8a13;text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:800;margin-bottom:16px}
-h1{font-size:clamp(42px,7vw,86px);line-height:.98;margin:0 0 22px;letter-spacing:-.045em}
-h2{font-size:clamp(34px,5vw,62px);line-height:1;margin:0 0 16px;letter-spacing:-.035em}
-.lead{font-size:clamp(16px,2vw,21px);line-height:1.6;color:var(--muted);max-width:720px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:14px 20px;border:1px solid rgba(255,255,255,.24);border-radius:9px;background:rgba(20,10,5,.35);backdrop-filter:blur(10px);font-weight:750}
-.btn.primary{background:var(--warm);border-color:var(--warm)}
-.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.pill{padding:9px 13px;border:1px solid var(--line);border-radius:99px;background:rgba(0,0,0,.22);font-size:13px;color:#f7e9da}
-.side{
- position:absolute;z-index:25;right:28px;top:50%;transform:translateY(-50%);
- display:flex;flex-direction:column;gap:10px
-}
-.dot{width:7px;height:7px;border-radius:50%;background:#fff5;cursor:pointer;transition:.3s}
-.dot.active{height:34px;border-radius:8px;background:var(--warm)}
-.progress{position:absolute;z-index:25;left:7vw;bottom:26px;font-size:11px;letter-spacing:.2em;color:#fff8}
-.counter{color:#ff9a27;font-weight:800}
-.bottom{position:absolute;z-index:25;left:7vw;right:7vw;bottom:22px;display:flex;justify-content:space-between;align-items:end}
-.scroll{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff8}
-.scene.products .content{left:5vw;right:5vw;top:auto;bottom:10vh;transform:none;max-width:none}
-.product-title{max-width:650px}
-.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:800px;margin-top:24px}
-.contact-card{padding:16px 18px;border:1px solid rgba(255,255,255,.17);background:rgba(20,10,5,.35);backdrop-filter:blur(12px);border-radius:12px}
-.contact-card small{display:block;color:#ff9a27;margin-bottom:5px;text-transform:uppercase;letter-spacing:.12em}
-.footer-mark{position:absolute;right:7vw;bottom:25px;z-index:25;font-size:13px;color:#fff8}
-.footer-mark b{color:white}
-@media(max-width:760px){
- .topbar{padding:13px 18px}.logo{height:43px}.nav{display:none}
- .content{left:22px;right:22px;top:52%}
- h1{font-size:clamp(39px,12vw,62px)}
- h2{font-size:clamp(34px,10vw,52px)}
- .lead{font-size:15px}.actions{margin-top:20px}.btn{padding:12px 15px}
- .side{right:13px}.bottom{left:22px;right:22px}
- .footer-mark{right:22px;font-size:11px}
- .contact-grid{grid-template-columns:1fr}
- .scene.products .content{left:22px;right:22px;bottom:9vh}
-}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.card img{height:112px}.trust{gap:6px}.tag{font-size:11px}.buttons .btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
-<main class="site" aria-label="Victorian Dream House">
-  <header class="topbar">
-    <a href="#home" class="brand"><img class="logo" src="assets/logo.jpg" alt="Victorian Dream House"></a>
-    <nav class="nav">
-      <a href="#about">About Us</a>
-      <a href="#products">Our Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#faq">FAQs</a>
-      <a href="#contact">Contact Us</a>
-      <a class="quote" href="https://wa.me/61431611754" target="_blank" rel="noopener">Get a Free Quote →</a>
-    </nav>
-  </header>
+<div class="page">
+<header class="nav">
+<a href="#home"><img class="logo" src="assets/logo.jpg" alt="Victorian Dream House"></a>
+<nav class="links">
+<a href="#about">About Us</a><a href="#products">Our Services</a><a href="#gallery">Gallery</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a>
+<a class="cta" href="https://wa.me/61431611754" target="_blank" rel="noopener">Get a Free Quote →</a>
+</nav>
+<button class="mobile-menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
+</header>
+<div id="mobileNav" style="position:fixed;z-index:49;top:69px;right:14px;display:none;background:#1b0f0cf5;border:1px solid var(--line);border-radius:12px;padding:12px;width:210px">
+<a href="#about" style="display:block;padding:9px">About Us</a><a href="#products" style="display:block;padding:9px">Our Services</a><a href="#gallery" style="display:block;padding:9px">Gallery</a><a href="#faqs" style="display:block;padding:9px">FAQs</a><a href="#contact" style="display:block;padding:9px">Contact Us</a><a href="https://victoriandreamhouse.au/" target="_blank" style="display:block;padding:9px;color:#ff941c">Visit Website →</a>
+</div>
+<style>#mobileNav.open{display:block!important}</style>
 
-  <section class="scene active" data-name="Home" id="home">
-    <img class="bg" src="assets/sliding-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">Victorian Dream House</div>
-      <h1>Aluminium Windows<br>& Doors Melbourne</h1>
-      <div class="lead">Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.</div>
-      <div class="actions">
-        <a class="btn primary" href="https://wa.me/61431611754" target="_blank" rel="noopener">Get a Free Quote →</a>
-        <a class="btn" href="#products">Explore Our Products</a>
-      </div>
-      <div class="meta"><span class="pill">Custom Manufactured</span><span class="pill">Melbourne</span><span class="pill">Victoria</span></div>
-    </div>
-  </section>
+<section class="hero scene active" id="home">
+<div class="media"><img src="assets/sliding-door.jpg" alt=""></div>
+<div class="wrap"><div class="eyebrow">Premium Aluminium Windows & Doors</div>
+<h1>Melbourne's Trusted <span class="accent">Aluminium Windows & Doors</span> Manufacturer</h1>
+<p class="lead">Custom solutions for residential, semi-commercial and commercial projects across Victoria.</p>
+<div class="buttons"><a class="btn primary" href="https://wa.me/61431611754" target="_blank">Get a Free Quote →</a><a class="btn" href="#products">Explore Our Services</a><a class="btn" href="https://victoriandreamhouse.au/" target="_blank" rel="noopener">Visit Website ↗</a></div>
+<div class="trust"><span class="tag">Premium Quality</span><span class="tag">Custom Made</span><span class="tag">Residential & Commercial</span><span class="tag">Modern Designs</span></div></div>
+</section>
 
-  <section class="scene products" data-name="Awning Windows" id="products">
-    <img class="bg" src="assets/awning.jpg" alt="">
-    <div class="content">
-      <div class="kicker">01 / Windows</div>
-      <div class="product-title"><h2>Awning Windows</h2><div class="lead">Top-hinged windows that open outward, providing ventilation while keeping rain outside.</div></div>
-    </div>
-  </section>
+<section class="products" id="products">
+<div class="wrap"><div class="head"><div><div class="eyebrow">Our Services</div><h2>Aluminium Windows & Doors Melbourne</h2></div><a class="btn" href="https://victoriandreamhouse.au/" target="_blank">View Current Website →</a></div>
+<div class="grid">
+<article class="card"><img src="assets/awning.jpg"><div class="body"><div class="type">Windows</div><h3>Awning Windows →</h3></div></article>
+<article class="card"><img src="assets/sliding-window.jpg"><div class="body"><div class="type">Windows</div><h3>Sliding Windows →</h3></div></article>
+<article class="card"><img src="assets/sliding-door.jpg"><div class="body"><div class="type">Doors</div><h3>Sliding Doors →</h3></div></article>
+<article class="card"><img src="assets/bifold-door.jpg"><div class="body"><div class="type">Doors</div><h3>Bifold Doors →</h3></div></article>
+<article class="card"><img src="assets/semi-commercial.jpg"><div class="body"><div class="type">Commercial</div><h3>Semi-Commercial →</h3></div></article>
+<article class="card"><img src="assets/commercial.jpg"><div class="body"><div class="type">Commercial</div><h3>Commercial →</h3></div></article>
+<article class="card"><img src="assets/security-door.jpg"><div class="body"><div class="type">Doors</div><h3>Security Doors →</h3></div></article>
+</div></div></section>
 
-  <section class="scene products" data-name="Sliding Windows">
-    <img class="bg" src="assets/sliding-window.jpg" alt="">
-    <div class="content">
-      <div class="kicker">02 / Windows</div>
-      <div class="product-title"><h2>Sliding Windows</h2><div class="lead">Smooth-operating windows designed for maximising ventilation without protruding outside.</div></div>
-    </div>
-  </section>
+<section class="scene" id="about"><div class="media"><img src="assets/commercial.jpg" alt=""></div><div class="wrap"><div class="eyebrow">About Victorian Dream House</div><h2>Built for Victoria.<br><span class="accent">Made for your project.</span></h2><p class="lead">Melbourne's trusted aluminium windows and doors manufacturer. Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.</p></div></section>
 
-  <section class="scene products" data-name="Sliding Doors">
-    <img class="bg" src="assets/sliding-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">03 / Doors</div>
-      <div class="product-title"><h2>Sliding Doors</h2><div class="lead">Seamless indoor-outdoor connection with effortless gliding operation.</div></div>
-    </div>
-  </section>
+<section class="process" id="gallery"><div class="wrap"><div class="eyebrow">How We Work</div><h2>From project brief<br>to finished opening.</h2><div class="processgrid"><div class="processcard"><div class="num">01</div><h3>Consultation</h3><p class="lead">Discuss your project, requirements and preferred window or door solution.</p></div><div class="processcard"><div class="num">02</div><h3>Measure & Design</h3><p class="lead">Plan the right configuration for your residential, semi-commercial or commercial space.</p></div><div class="processcard"><div class="num">03</div><h3>Manufacture</h3><p class="lead">Custom aluminium solutions prepared for your project in Victoria.</p></div></div></div></section>
 
-  <section class="scene products" data-name="Bifold Doors">
-    <img class="bg" src="assets/bifold-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">04 / Doors</div>
-      <div class="product-title"><h2>Bifold Doors</h2><div class="lead">Multi-panel folding doors that open up walls for expansive indoor-outdoor living.</div></div>
-    </div>
-  </section>
+<section class="scene" id="faqs"><div class="media"><img src="assets/bifold-door.jpg" alt=""></div><div class="wrap"><div class="eyebrow">FAQs / Enquiries</div><h2>Ready to start<br><span class="accent">your project?</span></h2><p class="lead">Get a free, no-obligation quote. Send your project details, photos or requirements directly to our team.</p><div class="buttons"><a class="btn primary" href="https://wa.me/61431611754" target="_blank">WhatsApp Salwan →</a><a class="btn" href="https://wa.me/61424633843" target="_blank">WhatsApp Haibat →</a></div></div></section>
 
-  <section class="scene products" data-name="Semi-Commercial">
-    <img class="bg" src="assets/semi-commercial.jpg" alt="">
-    <div class="content">
-      <div class="kicker">05 / Commercial</div>
-      <div class="product-title"><h2>Semi-Commercial</h2><div class="lead">Durable aluminium systems for mixed-use, retail and light commercial applications.</div></div>
-    </div>
-  </section>
+<section class="areas"><div class="wrap"><div class="eyebrow">Service Areas</div><h2>Across Victoria.</h2><p class="lead">Serving Melbourne and regional Victoria.</p><div class="area-grid"><span class="area">Melbourne Metro</span><span class="area">Geelong & Surf Coast</span><span class="area">Mornington Peninsula</span><span class="area">Ballarat & Goldfields</span><span class="area">Bendigo & Central VIC</span><span class="area">Gippsland</span><span class="area">Yarra Valley & Ranges</span><span class="area">All of Regional Victoria</span></div></div></section>
 
-  <section class="scene products" data-name="Commercial">
-    <img class="bg" src="assets/commercial.jpg" alt="">
-    <div class="content">
-      <div class="kicker">06 / Commercial</div>
-      <div class="product-title"><h2>Commercial</h2><div class="lead">High-duty aluminium curtain wall and commercial glazing systems.</div></div>
-    </div>
-  </section>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Get In Touch</div><h2>Ready to Start Your Project?</h2><p class="lead">Get a free, no-obligation quote from Victoria's aluminium window and door manufacturer.</p><div class="contactgrid">
+<a class="contactcard" href="tel:0431611754"><small>Salwan Samter</small>0431 611 754</a>
+<a class="contactcard" href="tel:0424633843"><small>Haibat Kaka</small>0424 633 843</a>
+<a class="contactcard" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au&su=Project%20Enquiry%20-%20Victorian%20Dream%20House" target="_blank" rel="noopener"><small>Email / Gmail</small>info@victoriandreamhouse.com.au</a>
+<a class="contactcard" href="https://victoriandreamhouse.au/" target="_blank"><small>Current Website</small>victoriandreamhouse.au ↗</a>
+<div class="contactcard"><small>Location</small>Melbourne, Victoria, Australia</div>
+<div class="contactcard"><small>Business Hours</small>Mon – Fri: 7:30am – 4:30pm</div>
+</div><div class="buttons contact-actions"><a class="btn primary" href="https://wa.me/61431611754" target="_blank">Get a Free Quote →</a><a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au" target="_blank">Open in Gmail →</a><a class="btn" href="https://victoriandreamhouse.au/" target="_blank">Visit Website ↗</a></div></div></section>
 
-  <section class="scene products" data-name="Security Doors">
-    <img class="bg" src="assets/security-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">07 / Doors</div>
-      <div class="product-title"><h2>Security Doors</h2><div class="lead">Premium aluminium security screen doors combining protection with style.</div></div>
-    </div>
-  </section>
-
-  <section class="scene" id="about" data-name="About">
-    <img class="bg" src="assets/commercial.jpg" alt="">
-    <div class="content">
-      <div class="kicker">About Us</div>
-      <h2>Built for Victoria.<br>Made for your project.</h2>
-      <div class="lead">Melbourne's trusted aluminium windows and doors manufacturer. Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.</div>
-      <div class="meta"><span class="pill">Residential</span><span class="pill">Semi-Commercial</span><span class="pill">Commercial</span></div>
-    </div>
-  </section>
-
-  <section class="scene" id="gallery" data-name="Gallery">
-    <img class="bg" src="assets/bifold-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">Gallery / Product Direction</div>
-      <h2>Open the view.<br>Change the space.</h2>
-      <div class="lead">A cinematic look through our window and door range — designed around modern Australian homes, commercial spaces and indoor-outdoor living.</div>
-    </div>
-  </section>
-
-  <section class="scene" id="faq" data-name="FAQs">
-    <img class="bg" src="assets/sliding-window.jpg" alt="">
-    <div class="content">
-      <div class="kicker">FAQs</div>
-      <h2>Need a quote?<br>Let's talk.</h2>
-      <div class="lead">Send your project details, photos or requirements and contact our team directly.</div>
-      <div class="actions">
-        <a class="btn primary" href="https://wa.me/61431611754" target="_blank" rel="noopener">WhatsApp Salwan →</a>
-        <a class="btn" href="https://wa.me/61424633843" target="_blank" rel="noopener">WhatsApp Haibat →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="scene" id="contact" data-name="Contact">
-    <img class="bg" src="assets/security-door.jpg" alt="">
-    <div class="content">
-      <div class="kicker">Ready to Start Your Project?</div>
-      <h2>Let's build the right opening.</h2>
-      <div class="lead">Get a free, no-obligation quote from Victoria's trusted aluminium window and door manufacturer.</div>
-      <div class="contact-grid">
-        <a class="contact-card" href="tel:0431611754"><small>Salwan Samter</small>0431 611 754</a>
-        <a class="contact-card" href="tel:0424633843"><small>Haibat Kaka</small>0424 633 843</a>
-        <a class="contact-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au" target="_blank" rel="noopener"><small>Email</small>info@victoriandreamhouse.com.au</a>
-        <div class="contact-card"><small>Location</small>Melbourne, Victoria, Australia</div>
-        <div class="contact-card"><small>Hours</small>Mon – Fri: 7:30am – 4:30pm</div>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="https://wa.me/61431611754" target="_blank" rel="noopener">Get a Free Quote →</a>
-        <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au" target="_blank" rel="noopener">Email Us →</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="side" id="dots"></div>
-  <div class="progress"><span class="counter" id="count">01</span> / <span id="total">14</span></div>
-  <div class="bottom"><div class="scroll">Scroll / Swipe</div></div>
-  <div class="footer-mark">Powered by <b>IQ GROUP</b></div>
-</main>
-
+<footer class="footer"><span>© Victorian Dream House. All rights reserved.</span><span>Premium Aluminium Windows & Doors — Victoria</span><span>Powered by <b>IQ GROUP</b></span></footer>
+</div>
 <script>
-const scenes=[...document.querySelectorAll('.scene')];
-const dots=document.getElementById('dots');
-const count=document.getElementById('count');
-document.getElementById('total').textContent=String(scenes.length).padStart(2,'0');
-let i=0, locked=false, timer;
-
-scenes.forEach((s,n)=>{
-  const d=document.createElement('button');
-  d.className='dot'+(n===0?' active':'');
-  d.setAttribute('aria-label',s.dataset.name||`Scene ${n+1}`);
-  d.onclick=()=>go(n,true);
-  dots.appendChild(d);
-});
-const dotEls=[...dots.children];
-
-function go(n,user=false){
-  n=(n+scenes.length)%scenes.length;
-  if(locked || n===i)return;
-  locked=true;
-  scenes[i].classList.remove('active'); dotEls[i].classList.remove('active');
-  i=n;
-  scenes[i].classList.add('active'); dotEls[i].classList.add('active');
-  count.textContent=String(i+1).padStart(2,'0');
-  setTimeout(()=>locked=false,850);
-  resetTimer();
-}
-function next(){go(i+1)}
-function prev(){go(i-1)}
-function resetTimer(){
-  clearInterval(timer);
-  timer=setInterval(next,6000);
-}
-window.addEventListener('wheel',e=>{ if(Math.abs(e.deltaY)>18) e.deltaY>0?next():prev(); },{passive:true});
-let sy=0,sx=0;
+const mobileNav=document.getElementById('mobileNav');
+document.querySelectorAll('#mobileNav a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+const scenes=[...document.querySelectorAll('.scene')];let active=0;
+function activate(){scenes.forEach((s,i)=>s.classList.toggle('active',i===active))}
+function step(dir){active=(active+dir+scenes.length)%scenes.length;activate()}
+let timer=setInterval(()=>step(1),8500);
+window.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>35){step(e.deltaY>0?1:-1);clearInterval(timer);timer=setInterval(()=>step(1),8500)}},{passive:true});
+let sx=0,sy=0;
 window.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
-window.addEventListener('touchend',e=>{
- const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
- if(Math.max(Math.abs(dx),Math.abs(dy))<45)return;
- if(Math.abs(dx)>Math.abs(dy)) dx<0?next():prev(); else dy<0?next():prev();
-},{passive:true});
-window.addEventListener('keydown',e=>{
- if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key))next();
- if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key))prev();
-});
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
- const id=a.getAttribute('href').slice(1),target=document.getElementById(id);
- if(!target)return;e.preventDefault();
- const n=scenes.indexOf(target);if(n>=0)go(n,true);
-}));
-resetTimer();
+window.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))<45)return;step(Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1));clearInterval(timer);timer=setInterval(()=>step(1),8500)},{passive:true});
+window.addEventListener('keydown',e=>{if(['ArrowDown','ArrowRight','PageDown'].includes(e.key))step(1);if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key))step(-1)});
 </script>
 </body>
 </html>
