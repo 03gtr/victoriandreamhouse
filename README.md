@@ -1,20 +1,21 @@
-# Victorian Dream House — QR Business Card
+# Victorian Dream House — Digital Business Card
 
-This is intentionally a compact 2-page digital business card, not a long website.
+Mobile-first two-page digital business card for Victorian Dream House.
 
-Upload `index.html` and `assets/` to the root of the GitHub Pages repository.
+## Deploy
+Upload the entire folder contents to the GitHub repository:
+`https://github.com/03gtr/victoriandreamhouse`
 
-Business-card URL:
-https://03gtr.github.io/victoriandreamhouse/
+GitHub Pages card URL:
+`https://03gtr.github.io/victoriandreamhouse/`
 
-The QR sticker should point to the business-card URL above.
+Official website linked inside the card:
+`https://victoriandreamhouse.au/`
 
-Official company website inside the card:
-https://victoriandreamhouse.au/
-
-Contact:
-- Salwan Samter — 0431 611 754
-- Haibat Kaka — 0424 633 843
-- info@victoriandreamhouse.com.au
-- Melbourne, Victoria, Australia
-- Mon–Fri: 7:30am–4:30pm
+## Design rules
+- Optimized primarily for phones (max-width 430px).
+- Two compact screens only.
+- Background photography animates independently with a slow crossfade/zoom.
+- Text and contact controls are HTML/UI layers and never part of the animated background.
+- Call / WhatsApp / Email / Location controls stay fixed at the bottom while switching pages.
+- Swipe left/right/up/down switches between the two screens.

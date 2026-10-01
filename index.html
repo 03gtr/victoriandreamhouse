@@ -2,135 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Victorian Dream House — Business Card</title>
-<meta name="description" content="Victorian Dream House — Aluminium Windows & Doors Melbourne.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b0806">
+<title>Victorian Dream House — Digital Business Card</title>
+<meta name="description" content="Victorian Dream House — Premium aluminium windows and doors across Victoria, Australia.">
 <style>
 :root{
-  --bg:#120904;--panel:#21130d;--paper:#f7f1e7;--muted:#cbbdb0;
-  --orange:#ed7900;--line:rgba(255,255,255,.14);--white:#fff;
+  --bg:#090706;
+  --glass:rgba(18,13,9,.72);
+  --glass2:rgba(18,13,9,.86);
+  --line:rgba(255,255,255,.17);
+  --white:#fff;
+  --muted:#ddd4cc;
+  --soft:#aaa097;
+  --orange:#ff8a00;
+  --orange2:#ffb52e;
+  --green:#25d366;
 }
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--white);
-font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-button,a{font:inherit}
-.card{position:relative;width:100%;height:100svh;overflow:hidden}
-.page{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateX(24px) scale(.985);
-transition:opacity .65s ease,transform .75s ease,visibility .65s ease}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{display:flex;justify-content:center}
+a,button{font:inherit}
+button{cursor:pointer}
+.card{position:relative;width:100%;height:100svh;max-width:430px;overflow:hidden;background:var(--bg);isolation:isolate}
+/* ---------- Animated background: imagery only, never text ---------- */
+.bg-stage{position:absolute;inset:0;z-index:0;overflow:hidden;background:#0b0806}
+.bg-slide{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;opacity:0;transform:scale(1.06);filter:brightness(.43) saturate(.9) contrast(1.03);transition:opacity 1.15s ease}
+.bg-slide.active{opacity:1;animation:bgMove 9s ease-in-out both}
+@keyframes bgMove{0%{transform:scale(1.06) translate3d(0,0,0)}50%{transform:scale(1.11) translate3d(-1.2%,-.7%,0)}100%{transform:scale(1.06) translate3d(.7%,.4%,0)}}
+.bg-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.30) 31%,rgba(0,0,0,.48) 62%,rgba(0,0,0,.92) 100%)}
+.page2-bg:after{background:linear-gradient(180deg,rgba(0,0,0,.66),rgba(0,0,0,.35) 38%,rgba(0,0,0,.94))}
+/* ---------- Two compact phone screens ---------- */
+.page{position:absolute;inset:0;z-index:2;padding:0 14px 98px;opacity:0;visibility:hidden;transform:translateX(18px);transition:opacity .45s ease,transform .5s ease,visibility .45s ease;overflow:hidden}
 .page.active{opacity:1;visibility:visible;transform:none}
-.page:after{content:"";position:absolute;inset:0;pointer-events:none;
-background:linear-gradient(180deg,rgba(10,4,1,.36),rgba(10,4,1,.18) 50%,rgba(10,4,1,.7))}
-.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.43) saturate(.8)}
-.page1 .bg{object-position:center}
-.page2{background:linear-gradient(145deg,#140905,#2a180f 52%,#100704)}
-.top{position:absolute;z-index:10;left:0;right:0;top:0;padding:20px 22px;display:flex;align-items:center;justify-content:space-between}
-.logo{width:74px;height:48px;object-fit:contain;background:#fff;border-radius:8px;padding:4px}
-.badge{border:1px solid var(--line);background:#120904aa;border-radius:99px;padding:8px 12px;font-size:11px;color:#eee}
-.badge i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#39d17a;margin-right:6px}
-.content{position:absolute;z-index:8;left:22px;right:22px;top:50%;transform:translateY(-50%);max-width:620px}
-.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:#ff951d;font-size:10px;font-weight:850;margin-bottom:12px}
-h1,h2{font-family:Georgia,serif;font-weight:500;letter-spacing:-.035em;margin:0}
-h1{font-size:clamp(42px,12vw,72px);line-height:.96}
-h2{font-size:clamp(34px,9vw,52px);line-height:1}
-.accent{color:#f1840a}
-.lead{color:var(--muted);font-size:15px;line-height:1.55;margin:16px 0 0;max-width:540px}
-.services{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
-.service{border:1px solid var(--line);background:#140a06b8;backdrop-filter:blur(8px);border-radius:10px;padding:11px 12px;font-size:12px}
-.service b{display:block;color:#fff;margin-bottom:3px}.service span{color:#aa9c91;font-size:10px}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 15px;border-radius:8px;border:1px solid var(--line);background:#140a06d9;color:#fff;text-decoration:none;font-weight:800;font-size:12px}
-.btn.primary{background:var(--orange);border-color:var(--orange)}
-.footer{position:absolute;z-index:10;left:22px;right:22px;bottom:18px;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#b9aaa0}
-.footer b{color:#fff}
-.nav{position:absolute;z-index:20;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:7px}
-.dot{width:7px;height:7px;border:0;border-radius:50%;background:#fff5;padding:0}.dot.active{width:25px;border-radius:7px;background:var(--orange)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
-.contact{border:1px solid var(--line);background:#140a06aa;border-radius:10px;padding:13px}
-.contact small{display:block;color:#ff951d;text-transform:uppercase;letter-spacing:.11em;font-size:9px;margin-bottom:5px}
-.contact strong{font-size:14px}.contact a{color:#fff;text-decoration:none}
-.note{margin-top:13px;color:#a99b90;font-size:10px;line-height:1.45}
-@media(min-width:800px){
- .content{left:7vw;right:7vw}.top{padding:24px 5vw}.footer{left:5vw;right:5vw}
- h1{font-size:78px}.lead{font-size:17px}.services{grid-template-columns:repeat(3,1fr);max-width:760px}
- .contact-grid{grid-template-columns:repeat(2,320px)}
+.top{height:76px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5;padding:12px 4px 8px}
+.logo{width:76px;height:55px;object-fit:contain;background:#fff;border-radius:10px;padding:4px;box-shadow:0 7px 24px rgba(0,0,0,.25)}
+.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:rgba(9,7,5,.64);backdrop-filter:blur(12px);border-radius:999px;padding:9px 11px;font-size:10px;font-weight:700;color:#f6f2ee;white-space:nowrap}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#41db7c;box-shadow:0 0 12px #41db7c}
+.content{position:relative;z-index:4;height:calc(100% - 76px);display:flex;flex-direction:column;min-height:0}
+.hero{padding:3px 5px 0}
+.eyebrow{margin:0 0 7px;text-transform:uppercase;letter-spacing:.18em;color:#ff981a;font-size:10px;font-weight:900}
+h1,h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.04em}
+h1{font-size:39px;line-height:.94}
+h2{font-size:34px;line-height:.96}
+.accent{color:var(--orange2)}
+.lead{margin:10px 0 0;color:#f1ebe5;font-size:12.5px;line-height:1.42;max-width:390px;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+/* service tiles: content is a clean HTML layer; images never contain text */
+.services{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px;min-height:0}
+.service{position:relative;height:82px;overflow:hidden;border:1px solid rgba(255,255,255,.2);border-radius:13px;background:rgba(22,15,10,.65);box-shadow:0 10px 26px rgba(0,0,0,.2);isolation:isolate}
+.service:before{content:"";position:absolute;inset:0;background-image:var(--photo);background-size:cover;background-position:center;filter:brightness(.58) saturate(.9);z-index:-2;transition:transform .4s ease}
+.service:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.78));z-index:-1}
+.service:hover:before{transform:scale(1.04)}
+.service-text{position:absolute;left:10px;right:42px;bottom:9px;font-size:12px;line-height:1.05;font-weight:800;text-shadow:0 2px 8px #000}
+.service-arrow{position:absolute;right:8px;bottom:8px;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),#ffb51d);color:#fff;font-weight:900;box-shadow:0 5px 15px rgba(255,138,0,.28)}
+.actions{display:grid;gap:8px;margin-top:11px}
+.btn{min-height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;gap:9px;padding:10px 13px;border:1px solid var(--line);background:rgba(20,14,10,.72);backdrop-filter:blur(12px);color:#fff;text-decoration:none;font-size:12px;font-weight:850}
+.btn.primary{background:linear-gradient(135deg,#ff9500,#ff7b00);border-color:#ff9a1a;box-shadow:0 10px 28px rgba(255,130,0,.22)}
+.icon{width:17px;height:17px;display:inline-block;flex:none}
+.small-footer{margin-top:auto;padding:9px 4px 0;display:flex;justify-content:space-between;color:#bdb2aa;font-size:9px}
+.small-footer strong{color:#fff}
+/* ---------- page 2 ---------- */
+.page2 .content{overflow:hidden}
+.contact-intro{padding:3px 5px 0}
+.contact-intro .lead{max-width:360px}
+.contacts{display:grid;gap:7px;margin-top:12px;min-height:0}
+.contact-card{min-height:55px;display:flex;align-items:center;gap:11px;padding:8px 10px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(18,12,8,.72);backdrop-filter:blur(13px);color:#fff;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,.18)}
+.contact-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none;background:linear-gradient(135deg,#ff9b12,#f87500);color:#fff}
+.contact-icon.whatsapp{background:var(--green)}
+.contact-icon.dark{border-radius:11px;background:rgba(255,145,0,.15);color:#ff9913}
+.contact-copy{min-width:0;flex:1}
+.contact-copy .label{display:block;color:#ff9a17;font-size:8px;text-transform:uppercase;letter-spacing:.11em;font-weight:800;margin-bottom:2px}
+.contact-copy strong{display:block;font-size:12px;line-height:1.22;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contact-copy span{display:block;color:#bcb0a6;font-size:9px;margin-top:2px}
+.chevron{color:#e6ddd6;font-size:22px;line-height:1}
+.areas{margin-top:9px;padding:10px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:rgba(18,12,8,.66);backdrop-filter:blur(12px)}
+.areas-title{display:flex;align-items:center;gap:7px;color:#ff9a17;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;color:#ddd4cc;font-size:8.5px;line-height:1.15}
+.area-grid span:before{content:"›";color:#ff9a17;margin-right:5px;font-weight:900}
+/* ---------- Fixed contact bar: always static ---------- */
+.fixed-nav{position:absolute;z-index:30;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));height:68px;border:1px solid rgba(255,255,255,.18);border-radius:24px;background:rgba(13,10,8,.86);backdrop-filter:blur(18px);box-shadow:0 12px 40px rgba(0,0,0,.48);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 5px}
+.nav-item{border:0;background:transparent;color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:8px;font-weight:700;min-width:0}
+.nav-icon{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:rgba(255,140,0,.18);border:1px solid rgba(255,255,255,.2)}
+.nav-icon.whatsapp{background:rgba(37,211,102,.95);border-color:rgba(255,255,255,.15)}
+.nav-icon.email{background:rgba(255,255,255,.08)}
+.nav-icon.location{background:rgba(255,92,37,.2)}
+.nav-item span:last-child{opacity:.92}
+/* page indicator sits above fixed contact bar */
+.pagination{position:absolute;z-index:31;left:50%;bottom:84px;transform:translateX(-50%);display:flex;gap:6px}
+.dot{width:7px;height:7px;border:0;border-radius:50%;padding:0;background:rgba(255,255,255,.35)}
+.dot.active{width:21px;border-radius:9px;background:var(--orange)}
+@media(min-width:700px){
+  body{align-items:center;background:radial-gradient(circle at center,#23160e 0,#000 48%)}
+  .card{height:min(900px,100svh);border-radius:26px;box-shadow:0 30px 100px rgba(0,0,0,.65)}
+}
+@media(max-height:700px){
+  .top{height:64px}.page{padding-bottom:91px}.content{height:calc(100% - 64px)}
+  .logo{width:68px;height:48px}.hero{padding-top:0}h1{font-size:34px}.lead{font-size:11.5px;margin-top:7px}.services{margin-top:9px;gap:6px}.service{height:68px}.service-text{font-size:10px}.service-arrow{width:23px;height:23px;right:7px;bottom:7px}.actions{margin-top:8px}.btn{min-height:37px}.contacts{margin-top:8px;gap:5px}.contact-card{min-height:49px}.contact-icon{width:32px;height:32px}.areas{margin-top:6px;padding:8px}.pagination{bottom:77px}.fixed-nav{height:62px}
+}
+@media(max-height:620px){
+  .lead{display:none}.services{margin-top:8px}.service{height:60px}.actions{margin-top:6px}.page2 .lead{display:block;font-size:10px}.contact-card{min-height:43px;padding:6px 8px}.contact-icon{width:28px;height:28px}.areas{display:none}
 }
 </style>
 </head>
 <body>
-<main class="card" id="card">
-<section class="page page1 active" id="p1">
-  <img class="bg" src="assets/sliding-door.jpg" alt="">
-  <header class="top">
-    <img class="logo" src="assets/logo.jpg" alt="Victorian Dream House">
-    <div class="badge"><i></i> Melbourne • Victoria</div>
-  </header>
-  <div class="content">
-    <div class="eyebrow">Victorian Dream House</div>
-    <h1>Aluminium<br><span class="accent">Windows & Doors</span></h1>
-    <p class="lead">Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.</p>
-    <div class="services">
-      <div class="service"><b>Awning Windows</b><span>Top-hinged ventilation</span></div>
-      <div class="service"><b>Sliding Windows</b><span>Smooth, space-saving design</span></div>
-      <div class="service"><b>Sliding Doors</b><span>Indoor-outdoor connection</span></div>
-      <div class="service"><b>Bifold Doors</b><span>Open-plan living</span></div>
-      <div class="service"><b>Security Doors</b><span>Protection with style</span></div>
-      <div class="service"><b>Commercial</b><span>Semi-commercial & commercial</span></div>
-    </div>
-    <div class="actions">
-      <a class="btn primary" href="https://wa.me/61431611754" target="_blank" rel="noopener">Get a Free Quote →</a>
-      <a class="btn" href="https://victoriandreamhouse.au/" target="_blank" rel="noopener">Official Website ↗</a>
-    </div>
+<main class="card" id="card" aria-label="Victorian Dream House digital business card">
+  <!-- Background animation only. No text is baked into these images. -->
+  <div class="bg-stage page1-bg" aria-hidden="true">
+    <img class="bg-slide active" src="assets/sliding-door.jpg" alt="">
+    <img class="bg-slide" src="assets/awning.jpg" alt="">
+    <img class="bg-slide" src="assets/bifold-door.jpg" alt="">
+    <img class="bg-slide" src="assets/security-door.jpg" alt="">
   </div>
-  <div class="footer"><span>Custom Aluminium Solutions • Victoria</span><span>01 / 02</span></div>
-</section>
-
-<section class="page page2" id="p2">
-  <header class="top">
-    <img class="logo" src="assets/logo.jpg" alt="Victorian Dream House">
-    <div class="badge">Contact & Enquiries</div>
-  </header>
-  <div class="content">
-    <div class="eyebrow">Ready to Start Your Project?</div>
-    <h2>Let's build the right<br><span class="accent">opening.</span></h2>
-    <p class="lead">Get in touch for a free, no-obligation quote.</p>
-    <div class="contact-grid">
-      <a class="contact" href="https://wa.me/61431611754" target="_blank" rel="noopener"><small>Salwan Samter</small><strong>0431 611 754</strong><br><span style="font-size:10px;color:#9fe6b6">WhatsApp →</span></a>
-      <a class="contact" href="https://wa.me/61424633843" target="_blank" rel="noopener"><small>Haibat Kaka</small><strong>0424 633 843</strong><br><span style="font-size:10px;color:#9fe6b6">WhatsApp →</span></a>
-      <a class="contact" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au" target="_blank" rel="noopener"><small>Email / Gmail</small><strong>info@victoriandreamhouse.com.au</strong></a>
-      <a class="contact" href="https://victoriandreamhouse.au/" target="_blank" rel="noopener"><small>Website</small><strong>victoriandreamhouse.au ↗</strong></a>
-      <div class="contact"><small>Location</small><strong>Melbourne, Victoria, Australia</strong></div>
-      <div class="contact"><small>Business Hours</small><strong>Mon – Fri: 7:30am – 4:30pm</strong></div>
-    </div>
-    <div class="actions">
-      <a class="btn primary" href="tel:0431611754">Call Salwan</a>
-      <a class="btn" href="tel:0424633843">Call Haibat</a>
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@victoriandreamhouse.com.au" target="_blank">Open Gmail</a>
-    </div>
-    <div class="note">Service areas: Melbourne Metro • Geelong & Surf Coast • Mornington Peninsula • Ballarat & Goldfields • Bendigo & Central VIC • Gippsland • Yarra Valley & Ranges • Regional Victoria</div>
+  <div class="bg-stage page2-bg" aria-hidden="true" style="opacity:0;transition:opacity .45s ease">
+    <img class="bg-slide active" src="assets/sliding-window.jpg" alt="">
+    <img class="bg-slide" src="assets/sliding-door.jpg" alt="">
+    <img class="bg-slide" src="assets/security-door.jpg" alt="">
   </div>
-  <div class="footer"><span>Premium Aluminium Windows & Doors</span><span>02 / 02</span></div>
-</section>
 
-<nav class="nav" aria-label="Business card pages">
-  <button class="dot active" aria-label="Page 1"></button><button class="dot" aria-label="Page 2"></button>
-</nav>
+  <section class="page page1 active" id="p1">
+    <header class="top">
+      <img class="logo" src="assets/logo.jpg" alt="Victorian Dream House">
+      <div class="badge"><i class="badge-dot"></i> Melbourne • Victoria</div>
+    </header>
+    <div class="content">
+      <div class="hero">
+        <p class="eyebrow">Victorian Dream House</p>
+        <h1>Aluminium<br><span class="accent">Windows &amp; Doors</span></h1>
+        <p class="lead">Premium custom solutions for residential, semi-commercial and commercial projects across Victoria.</p>
+      </div>
+      <div class="services">
+        <article class="service" style="--photo:url('assets/awning.jpg')"><div class="service-text">Awning<br>Windows</div><div class="service-arrow">›</div></article>
+        <article class="service" style="--photo:url('assets/sliding-window.jpg')"><div class="service-text">Sliding<br>Windows</div><div class="service-arrow">›</div></article>
+        <article class="service" style="--photo:url('assets/sliding-door.jpg')"><div class="service-text">Sliding<br>Doors</div><div class="service-arrow">›</div></article>
+        <article class="service" style="--photo:url('assets/bifold-door.jpg')"><div class="service-text">Bifold<br>Doors</div><div class="service-arrow">›</div></article>
+        <article class="service" style="--photo:url('assets/security-door.jpg')"><div class="service-text">Security<br>Doors</div><div class="service-arrow">›</div></article>
+        <article class="service" style="--photo:url('assets/sliding-door.jpg')"><div class="service-text">Commercial<br>&amp; Semi-Commercial</div><div class="service-arrow">›</div></article>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/61431611754" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15.5a4.5 4.5 0 0 1-4.9 4.5A14.5 14.5 0 0 1 4 8a4.5 4.5 0 0 1 4.5-4.9 1 1 0 0 1 1 .7l1 2.5a1 1 0 0 1-.2 1l-1.3 1.3a11 11 0 0 0 5.4 5.4l1.3-1.3a1 1 0 0 1 1-.2l2.5 1a1 1 0 0 1 .8 1z"/></svg>Get a Free Quote <span>›</span></a>
+        <a class="btn" href="https://victoriandreamhouse.au/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Visit Our Website <span>›</span></a>
+      </div>
+      <div class="small-footer"><span>Custom Aluminium Solutions • Victoria</span><span><strong>01</strong> / 02</span></div>
+    </div>
+  </section>
+
+  <section class="page page2" id="p2">
+    <header class="top">
+      <img class="logo" src="assets/logo.jpg" alt="Victorian Dream House">
+      <div class="badge">Contact &amp; Enquiries</div>
+    </header>
+    <div class="content">
+      <div class="contact-intro">
+        <p class="eyebrow">Ready to Start Your Project?</p>
+        <h2>Get in <span class="accent">Touch.</span></h2>
+        <p class="lead">Get a free, no-obligation quote from our team.</p>
+      </div>
+      <div class="contacts">
+        <a class="contact-card" href="tel:0431611754">
+          <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15.5a4.5 4.5 0 0 1-4.9 4.5A14.5 14.5 0 0 1 4 8a4.5 4.5 0 0 1 4.5-4.9 1 1 0 0 1 1 .7l1 2.5a1 1 0 0 1-.2 1l-1.3 1.3a11 11 0 0 0 5.4 5.4l1.3-1.3a1 1 0 0 1 1-.2l2.5 1a1 1 0 0 1 .8 1z"/></svg></span>
+          <span class="contact-copy"><span class="label">Salwan Samter</span><strong>0431 611 754</strong><span>Call</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/61431611754" target="_blank" rel="noopener">
+          <span class="contact-icon whatsapp"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 11.5a8 8 0 0 1-11.7 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.3 2.2 2.1 4 4.3 4.3l1.3-1.2 1.7.7c.2.1.3.3.2.5-.4 1.2-1.3 1.7-2.4 1.4-3.6-1-5.9-3.3-6.9-6.9-.3-1.1.2-2 1.4-2.4.2-.1.4 0 .5.2l.7 1.7-1.2 1.3Z"/></svg></span>
+          <span class="contact-copy"><span class="label">WhatsApp</span><strong>Chat with Salwan</strong><span>Open WhatsApp</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="tel:0424633843">
+          <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15.5a4.5 4.5 0 0 1-4.9 4.5A14.5 14.5 0 0 1 4 8a4.5 4.5 0 0 1 4.5-4.9 1 1 0 0 1 1 .7l1 2.5a1 1 0 0 1-.2 1l-1.3 1.3a11 11 0 0 0 5.4 5.4l1.3-1.3a1 1 0 0 1 1-.2l2.5 1a1 1 0 0 1 .8 1z"/></svg></span>
+          <span class="contact-copy"><span class="label">Haibat Kaka</span><strong>0424 633 843</strong><span>Call</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/61424633843" target="_blank" rel="noopener">
+          <span class="contact-icon whatsapp"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 11.5a8 8 0 0 1-11.7 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.3 2.2 2.1 4 4.3 4.3l1.3-1.2 1.7.7c.2.1.3.3.2.5-.4 1.2-1.3 1.7-2.4 1.4-3.6-1-5.9-3.3-6.9-6.9-.3-1.1.2-2 1.4-2.4.2-.1.4 0 .5.2l.7 1.7-1.2 1.3Z"/></svg></span>
+          <span class="contact-copy"><span class="label">WhatsApp</span><strong>Chat with Haibat</strong><span>Open WhatsApp</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@victoriandreamhouse.com.au" target="_blank" rel="noopener">
+          <span class="contact-icon dark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="m4 6 8 6 8-6"/></svg></span>
+          <span class="contact-copy"><span class="label">Email</span><strong>info@victoriandreamhouse.com.au</strong><span>Open Gmail</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="https://victoriandreamhouse.au/" target="_blank" rel="noopener">
+          <span class="contact-icon dark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <span class="contact-copy"><span class="label">Official Website</span><strong>victoriandreamhouse.au</strong><span>Visit website</span></span><span class="chevron">›</span>
+        </a>
+        <a class="contact-card" href="https://www.google.com/maps/search/?api=1&amp;query=Melbourne%2C%20Victoria%2C%20Australia" target="_blank" rel="noopener">
+          <span class="contact-icon dark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.2"/></svg></span>
+          <span class="contact-copy"><span class="label">Location</span><strong>Melbourne, Victoria, Australia</strong><span>Open Google Maps</span></span><span class="chevron">›</span>
+        </a>
+      </div>
+      <div class="areas">
+        <div class="areas-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.2"/></svg> Service Areas</div>
+        <div class="area-grid">
+          <span>Melbourne Metro</span><span>Geelong &amp; Surf Coast</span>
+          <span>Mornington Peninsula</span><span>Ballarat &amp; Goldfields</span>
+          <span>Bendigo &amp; Central VIC</span><span>Gippsland</span>
+          <span>Yarra Valley &amp; Ranges</span><span>All of Regional Victoria</span>
+        </div>
+      </div>
+      <div class="small-footer"><span>Mon – Fri: 7:30am – 4:30pm</span><span><strong>02</strong> / 02</span></div>
+    </div>
+  </section>
+
+  <!-- Static contact controls: page animation never moves these icons. -->
+  <nav class="fixed-nav" aria-label="Quick contact">
+    <a class="nav-item" href="tel:0431611754"><span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15.5a4.5 4.5 0 0 1-4.9 4.5A14.5 14.5 0 0 1 4 8a4.5 4.5 0 0 1 4.5-4.9 1 1 0 0 1 1 .7l1 2.5a1 1 0 0 1-.2 1l-1.3 1.3a11 11 0 0 0 5.4 5.4l1.3-1.3a1 1 0 0 1 1-.2l2.5 1a1 1 0 0 1 .8 1z"/></svg></span><span>Call</span></a>
+    <a class="nav-item" href="https://wa.me/61431611754" target="_blank" rel="noopener"><span class="nav-icon whatsapp"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 11.5a8 8 0 0 1-11.7 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.3 2.2 2.1 4 4.3 4.3l1.3-1.2 1.7.7c.2.1.3.3.2.5-.4 1.2-1.3 1.7-2.4 1.4-3.6-1-5.9-3.3-6.9-6.9-.3-1.1.2-2 1.4-2.4.2-.1.4 0 .5.2l.7 1.7-1.2 1.3Z"/></svg></span><span>WhatsApp</span></a>
+    <a class="nav-item" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@victoriandreamhouse.com.au" target="_blank" rel="noopener"><span class="nav-icon email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="m4 6 8 6 8-6"/></svg></span><span>Email</span></a>
+    <a class="nav-item" href="https://www.google.com/maps/search/?api=1&amp;query=Melbourne%2C%20Victoria%2C%20Australia" target="_blank" rel="noopener"><span class="nav-icon location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.2"/></svg></span><span>Location</span></a>
+  </nav>
+  <nav class="pagination" aria-label="Business card pages"><button class="dot active" aria-label="Page 1"></button><button class="dot" aria-label="Page 2"></button></nav>
 </main>
 <script>
-const pages=[...document.querySelectorAll('.page')],dots=[...document.querySelectorAll('.dot')];
-let current=0,locked=false,timer;
-function go(n){
- n=(n+pages.length)%pages.length;if(n===current||locked)return;locked=true;
- pages[current].classList.remove('active');dots[current].classList.remove('active');
- current=n;pages[current].classList.add('active');dots[current].classList.add('active');
- setTimeout(()=>locked=false,700);reset();
-}
-function reset(){clearTimeout(timer);timer=setTimeout(()=>go(current+1),9000)}
-dots.forEach((d,i)=>d.onclick=()=>go(i));
-let sx=0,sy=0;
-window.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
-window.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))<45)return;go((Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1))+current)},{passive:true});
-window.addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown'].includes(e.key))go(current+1);if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))go(current-1)});
-reset();
+(() => {
+  const pages=[...document.querySelectorAll('.page')];
+  const dots=[...document.querySelectorAll('.dot')];
+  const bgGroups=[...document.querySelectorAll('.bg-stage')];
+  let current=0, locked=false, timer=null;
+  let bgIndex=[0,0];
+
+  function showBackground(groupIndex, next=false){
+    const group=bgGroups[groupIndex];
+    const slides=[...group.querySelectorAll('.bg-slide')];
+    if(!slides.length)return;
+    if(next) bgIndex[groupIndex]=(bgIndex[groupIndex]+1)%slides.length;
+    slides.forEach((s,i)=>s.classList.toggle('active',i===bgIndex[groupIndex]));
+  }
+
+  function go(n){
+    n=(n+pages.length)%pages.length;
+    if(n===current || locked)return;
+    locked=true;
+    pages[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current=n;
+    pages[current].classList.add('active');
+    dots[current].classList.add('active');
+    bgGroups[0].style.opacity=current===0?'1':'0';
+    bgGroups[1].style.opacity=current===1?'1':'0';
+    setTimeout(()=>locked=false,520);
+    resetTimer();
+  }
+
+  function resetTimer(){
+    clearTimeout(timer);
+    timer=setTimeout(()=>go(current+1),9000);
+  }
+
+  dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
+  let sx=0,sy=0;
+  window.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+  window.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-sx;
+    const dy=e.changedTouches[0].clientY-sy;
+    if(Math.max(Math.abs(dx),Math.abs(dy))<45)return;
+    go(current+(Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1)));
+  },{passive:true});
+  window.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown'].includes(e.key))go(current+1);
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))go(current-1);
+  });
+
+  // Background motion is independent from the page/content layer.
+  setInterval(()=>showBackground(current,true),9000);
+  showBackground(0,false); showBackground(1,false);
+  resetTimer();
+})();
 </script>
 </body>
 </html>
